@@ -164,3 +164,64 @@ namespace LongestWordlnSentence
 }
 
 //Задание 7.
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numbers = new int[5];
+        
+        Console.WriteLine("Введите пять чисел:");
+        
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = Convert.ToInt32(Console.ReadLine());
+        }
+        
+        int max = numbers[0];
+        int min = numbers[0];
+        
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] > max)
+            {
+                max = numbers[i];
+            }
+            
+            if (numbers[i] < min)
+            {
+                min = numbers[i];
+            }
+        }
+        
+        Console.WriteLine("Максимальное число: " + max);
+        Console.WriteLine("Минимальное число: " + min);
+    }
+}
+//Задание 8.
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите количество уровней пирамиды:");
+        int levels = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= levels; i++)
+        {
+            for (int j = 1; j <= levels - i; j++)
+            {
+                Console.Write(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++)
+            {
+                Console.Write(k);
+            }
+            Console.WriteLine();
+        }
+
+        Console.ReadLine();
+    }
+}
